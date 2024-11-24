@@ -489,3 +489,209 @@ nav, nav ul li a, footer {
     background: linear-gradient(45deg, #6a11cb20, #2575fc20);
 }
 
+/* التنسيقات العامة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    body {
+        padding-top: 150px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+        padding: 5px 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* تنسيق صفحة عني للموبايل */
+    .profile-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    /* تنسيق صفحة حول النظام للموبايل */
+    .timeline {
+        padding: 10px;
+    }
+
+    .timeline-item {
+        margin-right: 20px;
+    }
+
+    .timeline-item::after {
+        right: -30px;
+    }
+
+    .timeline-item::before {
+        right: -21px;
+    }
+
+    .models-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+/* التنسيقات للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .form-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-container {
+        gap: 30px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* تنسيقات إضافية للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .contact-links {
+        gap: 15px;
+    }
+
+    .contact-link {
+        font-size: 1.2em;
+    }
+
+    /* تحسين قابلية النقر على الروابط في الموبايل */
+    nav ul li a {
+        padding: 12px 20px;
+    }
+
+    .feature-items {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .feature-item {
+        text-align: center;
+    }
+}
+
+/* تحسينات للشاشات العريضة */
+@media (min-width: 1025px) {
+    .form-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container {
+        padding: 30px;
+    }
+}
+
+/* تحسينات عامة للتجاوب */
+.form-group input,
+.form-group select,
+.btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* تحسين تجربة المستخدم على الأجهزة اللمسية */
+@media (hover: none) {
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    nav ul li a:active {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .skill-item:active {
+        transform: translateY(-2px);
+    }
+}
+
+/* تحسين قراءة النص على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3 {
+        line-height: 1.3;
+    }
+
+    .info-card {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* تحسين المسافات والهوامش للشاشات المختلفة */
+@media (max-width: 1024px) {
+    section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .timeline-item {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .models-list {
+        gap: 10px;
+    }
+}
+
