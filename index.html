@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توقع أداء الطالب</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1 class="page-title">توقع الأداء الأكاديمي للطالب</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> حول النظام</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>عني</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <form id="predictionForm" class="form-container">
+                    <div class="form-group">
+                        <label>العمر:</label>
+                        <input type="number" name="Age" min="15" max="18" required placeholder="أدخل العمر">
+                    </div>
+                    <div class="form-group">
+                        <label>الجنس:</label>
+                        <select name="Gender" required>
+                            <option value="">اختر الجنس</option>
+                            <option value="0">ذكر</option>
+                            <option value="1">أنثى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>العرق:</label>
+                        <select name="Ethnicity" required>
+                            <option value="">اختر العرق</option>
+                            <option value="0">قوقازي</option>
+                            <option value="1">أفريقي أمريكي</option>
+                            <option value="2">آسيوي</option>
+                            <option value="3">آخر</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>مستوى تعليم الوالدين:</label>
+                        <select name="ParentalEducation" required>
+                            <option value="">اختر مستوى التعليم</option>
+                            <option value="0">لا يوجد</option>
+                            <option value="1">ثانوي</option>
+                            <option value="2">بعض الدراسة الجامعية</option>
+                            <option value="3">بكالوريوس</option>
+                            <option value="4">أعلى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>وقت الدراسة الأسبوعي:</label>
+                        <input type="number" name="StudyTimeWeekly" min="0" max="20" step="0.5" required placeholder="أدخل ساعات الدراسة">
+                    </div>
+                    <div class="form-group">
+                        <label>عدد مرات الغياب:</label>
+                        <input type="number" name="Absences" min="0" max="30" required placeholder="أدخل عدد الغيابات">
+                    </div>
+                    <div class="form-group">
+                        <label>الدروس الخصوصية:</label>
+                        <select name="Tutoring" required>
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>دعم الوالدين:</label>
+                        <select name="ParentalSupport" required>
+                            <option value="">اختر مستوى الدعم</option>
+                            <option value="0">لا يوجد</option>
+                            <option value="1">منخفض</option>
+                            <option value="2">متوسط</option>
+                            <option value="3">عالي</option>
+                            <option value="4">عالي جدًا</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الأنشطة اللامنهجية:</label>
+                        <select name="Extracurricular" required>
+                            
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الأنشطة الرياضية:</label>
+                        <select name="Sports" required>
+                            
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الأنشطة الموسيقية:</label>
+                        <select name="Music" required>
+                            
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>العمل التطوعي:</label>
+                        <select name="Volunteering" required>
+                            
+                            <option value="0">لا</option>
+                            <option value="1">نعم</option>
+                        </select>
+                    </div>
+                    <div class="submit-btn-container">
+                        <button type="submit" class="btn">توقع الأداء</button>
+                    </div>
+                </form>
+                <div id="result" class="result-item"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 نظام التنبؤ الأكاديمي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="animation.js"></script>
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            try {
+                const data = Object.fromEntries(
+                    Array.from(formData.entries()).map(([k, v]) => [k, parseFloat(v)])
+                );
+                
+                console.log('Sending data:', data);
+
+                const response = await fetch('http://127.0.0.1:8000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                console.log('Response status:', response.status);
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('Error response:', errorText);
+                    throw new Error(errorText);
+                }
+
+                const result = await response.json();
+                console.log('Result:', result);
+
+                const gradeMap = {
+                    0: 'ممتاز (90-100%)',
+                    1: 'جيد جدًا (80-89%)',
+                    2: 'جيد (70-79%)',
+                    3: 'مقبول (60-69%)',
+                    4: 'راسب (أقل من 60%)'
+                };
+
+                document.getElementById('result').textContent = `الدرجة المتوقعة: ${gradeMap[result.prediction] || 'غير معروف'}`;
+                document.getElementById('result').style.backgroundColor = '#e6f7ff';
+                document.getElementById('result').style.padding = '10px';
+                document.getElementById('result').style.borderRadius = '5px';
+                document.getElementById('result').style.textAlign = 'center';
+                document.getElementById('result').style.fontWeight = 'bold';
+            } catch (error) {
+                console.error('Complete Error:', error);
+                document.getElementById('result').textContent = `حدث خطأ: ${error.message}`;
+                document.getElementById('result').style.backgroundColor = '#ffebee';
+                document.getElementById('result').style.color = '#d32f2f';
+            }
+        });
+    </script>
+</body>
+</html> 

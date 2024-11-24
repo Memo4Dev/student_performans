@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>حول النظام</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="title-container">
+            <h1 class="page-title">حول النظام</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> حول النظام</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>عني</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 class="section-title">بداية المشروع</h3>
+                <p>بدأ المشروع بهدف تطوير نظام ذكي لتوقع الأداء الأكاديمي للطلاب باستخدام تقنيات الذكاء الاصطناعي.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="section-title">جمع بيانات الطلاب</h3>
+                <p>تم جمع بيانات أكثر من 2000 طالب لتدريب النموذج وتحسين دقة التوقعات.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="section-title">تحليل 15 عامل مؤثر</h3>
+                <div class="features-list">
+                    <div class="feature-category">
+                        <h4>العوامل الرقمية:</h4>
+                        <div class="feature-items">
+                            <span class="feature-item">العمر</span>
+                            <span class="feature-item">وقت الدراسة الأسبوعي</span>
+                            <span class="feature-item">عدد مرات الغياب</span>
+                        </div>
+                    </div>
+                    <div class="feature-category">
+                        <h4>العوامل التصنيفية:</h4>
+                        <div class="feature-items">
+                            <span class="feature-item">الجنس</span>
+                            <span class="feature-item">العرق</span>
+                            <span class="feature-item">مستوى تعليم الوالدين</span>
+                            <span class="feature-item">الأنشطة اللامنهجية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="section-title">إنشاء وتدريب اكثر من  20 نموذج ذكاء اصطناعي</h3>
+                <div class="models-list">
+                    <div class="model-item">XGBoost</div>
+                    <div class="model-item">LightGBM</div>
+                    <div class="model-item">CatBoost</div>
+                    <div class="model-item">Random Forest</div>
+                    <div class="model-item">Gradient Boosting</div>
+                    <div class="model-item">Extra Trees</div>
+                    <div class="model-item">Ada Boost</div>
+                    <div class="model-item">SVM</div>
+                    <div class="model-item">Naive Bayes</div>
+                    <div class="model-item">...</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="section-title">تحويل النموذج إلى API</h3>
+                <p>تم استخدام FastAPI لتطوير واجهة برمجة التطبيقات، مما يتيح استخدام النموذج في تطبيقات الويب.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="section-title">إنشاء واجهة المستخدم</h3>
+                <p>تم تطوير واجهة مستخدم سهلة الاستخدام باستخدام HTML5 وCSS3 وJavaScript.</p>
+            </div>
+
+              <div class="timeline-item">
+                <h3 class="section-title">اهداف المشروع</h3>
+                <p>مساعدة المعلمين في دعم الطلبة</p>
+                <p>تمكين الطبلة من فهم العوامل التي تؤثر علي ادائهم</p>
+                <p>تطوير استراتيجيات تعليمية مخصصة</p>
+            </div>
+        </div>
+    </main>
+    <script src="animation.js"></script>
+    <script src = "style.css"></script>
+
+    <footer>
+        <p>&copy; 2024 نظام التنبؤ الأكاديمي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                if (isElementInViewport(item)) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', handleScroll);
+       
+        window.addEventListener('scroll', handleScroll);
+    </script>
+    <script src="animation.js"></script>
+</body>
+
+</html>
