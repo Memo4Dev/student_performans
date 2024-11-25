@@ -489,7 +489,7 @@ nav, nav ul li a, footer {
     background: linear-gradient(45deg, #6a11cb20, #2575fc20);
 }
 
-/* التنسيقات العامة للشاشات الصغيرة */
+
 @media (max-width: 768px) {
     body {
         padding-top: 150px;
@@ -510,7 +510,6 @@ nav, nav ul li a, footer {
         padding: 15px;
     }
 
-    /* تنسيق صفحة عني للموبايل */
     .profile-container {
         flex-direction: column;
         gap: 20px;
@@ -525,7 +524,7 @@ nav, nav ul li a, footer {
         width: 100%;
     }
 
-    /* تنسيق صفحة حول النظام للموبايل */
+ 
     .timeline {
         padding: 10px;
     }
@@ -547,7 +546,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* التنسيقات للشاشات المتوسطة */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .form-container {
         grid-template-columns: repeat(2, 1fr);
@@ -563,7 +562,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* تنسيقات إضافية للشاشات الصغيرة جداً */
+
 @media (max-width: 480px) {
     body {
         padding-top: 120px;
@@ -609,7 +608,7 @@ nav, nav ul li a, footer {
         font-size: 1.2em;
     }
 
-    /* تحسين قابلية النقر على الروابط في الموبايل */
+    
     nav ul li a {
         padding: 12px 20px;
     }
@@ -624,7 +623,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* تحسينات للشاشات العريضة */
+
 @media (min-width: 1025px) {
     .form-container {
         grid-template-columns: repeat(3, 1fr);
@@ -635,7 +634,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* تحسينات عامة للتجاوب */
+
 .form-group input,
 .form-group select,
 .btn {
@@ -643,7 +642,6 @@ nav, nav ul li a, footer {
     box-sizing: border-box;
 }
 
-/* تحسين تجربة المستخدم على الأجهزة اللمسية */
 @media (hover: none) {
     .btn:active {
         transform: scale(0.98);
@@ -658,7 +656,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* تحسين قراءة النص على الشاشات الصغيرة */
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -678,7 +676,7 @@ nav, nav ul li a, footer {
     }
 }
 
-/* تحسين المسافات والهوامش للشاشات المختلفة */
+
 @media (max-width: 1024px) {
     section {
         margin: 10px 0;
