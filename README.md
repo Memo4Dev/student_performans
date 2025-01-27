@@ -1,33 +1,33 @@
-# نظام التنبؤ بالأداء الأكاديمي للطلاب
+# Student Academic Performance Prediction System
 
-نظام ذكي يستخدم تقنيات الذكاء الاصطناعي للتنبؤ بالأداء الأكاديمي للطلاب بناءً على مجموعة من العوامل المؤثرة.
+An intelligent system leveraging AI techniques to predict students' academic performance based on a variety of influential factors.
 
-## 🚀 مميزات النظام
+## 🚀 System Features
 
-- تحليل 15 عامل مؤثر في الأداء الأكاديمي
-- استخدام أكثر من 20 نموذج ذكاء اصطناعي
-- واجهة مستخدم سهلة الاستخدام
-- دقة تنبؤ عالية
-- API مرن وقابل للتوسع
+- Analysis of 15 factors affecting academic performance
+- Utilizes over 20 AI models
+- User-friendly interface
+- High prediction accuracy
+- Flexible and scalable API
 
-## 💻 التقنيات المستخدمة
+## 💻 Technologies Used
 
-- **الواجهة الأمامية:**
+- **Frontend:**
   - HTML5
   - CSS3
   - JavaScript
   - Font Awesome
   - SweetAlert2
 
-- **الخادم والذكاء الاصطناعي:**
+- **Backend and AI:**
   - Python
   - FastAPI
   - PyCaret
   - Pandas
   - NumPy
 
-## 🛠️ متطلبات التشغيل
+## 🛠️ Requirements
 
 1. Python 3.8+
-2. متصفح ويب حديث
-3. تثبيت المكتبات المطلوبة:
+2. Modern web browser
+3. Install required libraries:
